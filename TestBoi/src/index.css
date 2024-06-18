@@ -1,0 +1,51 @@
+body {
+  display: flexbox;
+  flex-direction: row;
+  text-align: center;
+  font-family: "Ubuntu Mono", 'Times New Roman', Times, serif;
+  color: rgb(197, 221, 219);
+  background-color: rgb(37, 37, 37);
+  font-size: 2.2rem;
+}
+
+button {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: blueviolet;
+  font-size: 2rem;
+  color: antiquewhite;
+  border: none;
+  border-radius: 18px;
+}
+
+#ScoreText {
+  font-size: 5rem;
+}
+
+.line {
+  border: solid rgb(205, 58, 58);
+  border-radius: 20px;
+  border-width: 1.2rem;
+  width: 50rem;
+  opacity: 35%;
+}
+
+.scoreboard {
+  /* For each individual scoreboard, try adding a background-color element
+  in the css, you will notice its' width is likely across the entire screen
+  this would imply they cannot be aligned horizontally, as one scoreboard is the entire row width!
+  To remedy this, we must put a max-width to give room for more elements in a flex row. */
+  max-width: fit-content;
+  padding: 40px;
+  border: solid;
+  border-radius: 20px;
+  margin: 27px 20px 0px 20px;
+}
+
+.scoreCon {
+  /* We set our display to flex on this container for the scoreboards, this will
+  make our individual scoreboard elements align themselves in one row by default.
+  This did not work originally due to their individual widths being equivalent to
+  one row, see comment in .scoreboard above for more info */
+  display: flex;
+  justify-content: center;
+}
